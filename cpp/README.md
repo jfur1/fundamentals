@@ -1,5 +1,7 @@
 # C++ Fundamentals
 
+### Asymptotic Analysis (Big-O Complexity)
+![Big-O](../data-structures/img/big-o)
 
 ## Table of Contents
 
