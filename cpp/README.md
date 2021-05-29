@@ -1,8 +1,5 @@
 # C++ Fundamentals
 
-### Asymptotic Analysis (Big-O Complexity)
-![Big-O](../data-structures/img/big-o)
-
 ## Table of Contents
 
 ### [Algorithms](algorithms)
@@ -23,3 +20,9 @@
   * [Bit Manipulation](data-structures/5-bit-manipulation)
 
   * [Classes](data-structures/6-classes)
+
+<hr/>
+
+![Big-O](data-structures/img/big-o.png)
+![ds-ops](data-structures/img/data-structures-big-o.png)
+![sort-ops](data-structures/img/array-sorting-big-o.png)
