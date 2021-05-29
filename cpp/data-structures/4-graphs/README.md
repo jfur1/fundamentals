@@ -33,8 +33,6 @@ A binary search tree is a binary tree in which every node follows a specific ord
   - This must be true for every node `n`
 
 <p float="left">
-  <p> Not a binary search tree</p>
   <img style="width: 100;" src="../img/binary-tree.png">
-  <p> A binary search tree</p>
   <img style="width: 100;" src="../img/bst.png">
 </p>
