@@ -1,6 +1,6 @@
 # [Data Structures](../)
 
-## Stacks and Queues
+## Stacks and Queues (C++)
 
 ### Stacks
 The stack data structure is precisely what is sounds like: a stack of data. In certain types of problems, it can be favorable to store data in a stack over an array.
