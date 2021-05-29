@@ -1,6 +1,8 @@
-# Arrays and Strings (C++)
+# [Data Structures](../)
 
-## Arrays:
+## Arrays and Strings (C++)
+
+### Arrays:
 An array in C or C++ is a collection of items stored at contiguous memory locations and elements can be accessed randomly using indices of the array.
 
   - One Dimensional Array:
@@ -20,7 +22,7 @@ An array in C or C++ is a collection of items stored at contiguous memory locati
     > <b>N</b> is the number of rows. <br/>
     > <b>M</b> is the numbers of columns.
 
-## Strings:
+### Strings:
 
 Internally, C++ uses a character array to store strings. Memory management, allocation, and null termination are all handled by the string class itself, which is why it's easy to use. 
 
