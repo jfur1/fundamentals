@@ -1,2 +1,4 @@
-# Arrays and Strings
+# [Data Structures](../)
+
+## Stacks and Queues
 
