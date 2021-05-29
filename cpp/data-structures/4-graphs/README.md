@@ -36,3 +36,18 @@ A binary search tree is a binary tree in which every node follows a specific ord
   <img style="width: 100;" src="../img/binary-tree.png">
   <img style="width: 100;" src="../img/bst.png">
 </p>
+
+### Balanced vs. Unbalanced
+
+#### Complete Binary Trees:
+A complete binary tree is a binary tree in which every level of the tree is fully filled, except for perhaps the last level. To the extent that the last level is filled, it is filled from left to right:
+
+<p float="left">
+  <span style="margin-right: 20px;">Not a complete binary tree</span>
+  <span style="margin-left: 20px;">A complete binary tree</span>
+</p>
+<br/>
+<p float="left">
+  <img style="width: 100;" src="../img/incomplete-binary-tree.png">
+  <img style="width: 100;" src="../img/complete-binary-tree.png">
+</p>
