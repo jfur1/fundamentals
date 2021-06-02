@@ -4,6 +4,19 @@
 In divide and conquer algorithms, the idea is to solve the problem in two sections. The first section divides the problem into subproblems of the same type. The second section solves the smaller problem independently and then adds the combined results to return the final solution to the problem.
 
 ### Merge Sort
+Merge sort divides the input array into two halves, calls itself on the two halves, then merges the two sorted halves. The `merge()` function is used to merge the two sorted halves. 
+
+<img src="../img/merge-sort.png"/>
+
+- Time Complexity: O(N log N) for all 3 cases (worst, average, and best)
+  - Mergesort always divides the array into two halves and takes linear time to merge the two halves.
+- Space Complexity: O(N)
+
+Applications of Mergesort:
+1. Usefor for [sorting linked lists](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) in O(N log N) time -- requires no auxilary space!
+2. [Inverted counting](https://www.geeksforgeeks.org/counting-inversions/)
+3. [External sorting](https://en.wikipedia.org/wiki/External_sorting)
+
 
 ### Quick Sort
 
