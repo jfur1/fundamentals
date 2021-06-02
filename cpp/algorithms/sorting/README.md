@@ -8,9 +8,10 @@ Merge sort divides the input array into two halves, calls itself on the two halv
 
 <img src="../img/merge-sort.png"/>
 
-- Time Complexity: O(N log N) for all 3 cases (worst, average, and best)
+- Time Complexity: **O(N log N)** for all 3 cases (worst, average, and best)
   - Mergesort always divides the array into two halves and takes linear time to merge the two halves.
-- Space Complexity: O(N)
+- Space Complexity: **O(N)**
+  - The space required for temp arrays L[] and R[]
 
 Applications of Mergesort:
 1. Usefor for [sorting linked lists](https://www.geeksforgeeks.org/merge-sort-for-linked-list/) in O(N log N) time -- requires no auxilary space!
@@ -19,8 +20,22 @@ Applications of Mergesort:
 
 
 ### Quick Sort
+Like mergesort, Quicksort is another divide and conquer algorithm. It picks an element as a pivot and partitions the given array around that pivot. There are four main versions of quicksort that choose the pivot in different ways:
+  1. Always pick the first element as the pivot
+  2. Always pick the last element as the pivot
+  3. Pick a random element as the pivot
+  4. Pick the median as the pivot
 
+The key process in Quicksort is the `partition()` function. The target of partition is, given an array and an element x of the array as a pivot, put element x at its correct position in the sorted array. Then, put all elements less than x before x, and all elements greater than x after x. This is all acheived in linear time. 
 
+<img src="../img/quick-sort.png"/>
+
+- **Time Complexity**: 
+  - Worst Case: **O(n^2)**
+  - Average Case: **O(N log N)**
+  - Best Case: **O(N log N)**
+
+<hr/>
 
 ## Dynamic Programming (Memoization) Algorithms
 In dynamic programming, we using memoization to avoid repeated work by storing previously calculated results. The problem is divided into smaller, overlapping subproblems and the results are stored for future use.
