@@ -8,9 +8,9 @@ Merge sort divides the input array into two halves, calls itself on the two halv
 
 <img src="../img/merge-sort.png"/>
 
-- Time Complexity: **O(N log N)** for all 3 cases (worst, average, and best)
+- **Time Complexity:** **O(N log N)** for all 3 cases (worst, average, and best)
   - Mergesort always divides the array into two halves and takes linear time to merge the two halves.
-- Space Complexity: **O(N)**
+- **Space Complexity:** **O(N)**
   - The space required for temp arrays L[] and R[]
 
 Applications of Mergesort:
@@ -34,7 +34,11 @@ The key process in Quicksort is the `partition()` function. The target of partit
   - Worst Case: **O(n^2)**
   - Average Case: **O(N log N)**
   - Best Case: **O(N log N)**
+- **Space Complexity**:
+  - **O(1)** -- no auxilary space necessary!
 
+Advantages:
+- In-place sorting algorithm -- no auxilary space required
 <hr/>
 
 ## Dynamic Programming (Memoization) Algorithms
