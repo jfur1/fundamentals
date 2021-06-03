@@ -1,4 +1,6 @@
 #include <iostream>
+#include <cstdlib> // rand()
+#include <math.h>   // floor()
 using namespace std;
 
 // Utility function used to swap two elements
@@ -50,6 +52,19 @@ int partitionFirst(int arr[], int low, int high){
     return (i - 1);
 }
 
+// Helper function for median partition that returns the median of three numbers
+int medianOfThree(int arr[], int low, int high){
+    int mid = floor((low+high)/2);
+    int a = arr[low];
+    int b = arr[mid];
+    int c = arr[high];
+    if((a-b) * (c-a) >= 0)
+        return low;
+    else if((b-a) * (c-b) >= 0)
+        return mid;
+    else
+        return high;
+}
 /*
     Function takes the MEDIAN element to be the pivot.
     Places the pivot at its correct position in the sorted array,
@@ -57,8 +72,20 @@ int partitionFirst(int arr[], int low, int high){
     and places all elements greater than pivot to the right of pivot.
 */
 int partitionMedian(int arr[], int low, int high){
+    int median = medianOfThree(arr, low, high);
+    swap(&arr[low], &arr[median]);
+    
+    int pivot = arr[low];
+    int i = low + 1;
 
-    return 0;
+    for(int j = low + 1; j <= high; j++){
+        if(arr[j] < pivot){
+            swap(&arr[i], &arr[j]);
+            i++;
+        }
+    }
+    swap(&arr[low], &arr[i-1]);
+    return (i - 1);
 }
 
 /*
@@ -66,10 +93,17 @@ int partitionMedian(int arr[], int low, int high){
     Places the pivot at its correct position in the sorted array,
     and places all elements less than pivot to the left of pivot,
     and places all elements greater than pivot to the right of pivot.
+    This method minimizes the chances of taking O(N^2) time
 */
 int partitionRandom(int arr[], int low, int high){
+    // Generate a random number between low...high
+    srand(time(NULL));
+    int random = low + rand() % (high - low);
 
-    return 0;
+    // Swap arr[random] with arr[high]
+    swap(&arr[random], &arr[high]);
+
+    return partitionFirst(arr, low, high);
 }
 
 void quicksort(int arr[], int low, int high, int (* partition)(int arr[], int low, int high)){
@@ -110,6 +144,8 @@ int main(int argc, char* argv[]){
             quicksort(arr, 0, arr_size - 1, &partitionMedian);
         else if(string(argv[1]) ==  "random")
             quicksort(arr, 0, arr_size - 1, &partitionRandom);
+        else
+            cout << "Invalid command line argument: " << argv[1] << endl;
     }
 
     cout << "Sorted array: \n";
