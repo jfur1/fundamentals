@@ -23,14 +23,9 @@
 
 <hr/>
 
-![Big-O](data-structures/img/big-o.png)
-![ds-ops](data-structures/img/data-structures-big-o.png)
-![sort-ops](data-structures/img/array-sorting-big-o.png)
-<hr/>
-
 ## Asymptotic Analysis
 
-### Time Complexity
+## Time Complexity
 For the sake of simplicity, we shall only consider Big-O notation, which is the convention in practice. We can describe the Big-O runtime of an algorithm in 3 different ways. Let's take a look at quicksort as an example:
 
 Quicksort chooses a random element as a "pivot" and then swaps values in the array such that elements less than the pivot come before elements greater than the pivot. This gives us a "partial sort". Then it recursively sorts the left and right subarrays using a similar process.
@@ -44,10 +39,10 @@ Quicksort chooses a random element as a "pivot" and then swaps values in the arr
  - **Expected Case**:
    - Typically, these wonderful (or terrible) situations will not occur. Sure, sometimes our pivot may be very low or high, but usually won't happen over and over again. We can expect a runtime of **O(N log N)**.
 
-#### Drop the Constants:
+### Drop the Constants:
 It is very possible for <i>O(N)</i> code to run faster than <i>O(1)</i> code for specific inputs. Big-O simply describes the rate of increase. For this reason, we drop constants when describing runtimes. An algorithm that one might describe as <i>O(2N)</i> is actually <i>O(N)</i>.
 
-#### Drop the Non-Dominant Terms:
+### Drop the Non-Dominant Terms:
 What do we do in the case of a runtime like `O(N^2 + N)`? The second `N` isn't exactly a constant, but it's not especially important. We already discussed dropping constants, therefore `O(N^2 + N^2)` would actually just be `O(N^2)`. If we don't care about the second `N^2` term, then why would we care about `N`? We don't. 
 
 You should drop the non-dominant terms:
@@ -57,10 +52,10 @@ You should drop the non-dominant terms:
 
 We can still have a sum in a rumtime, however. For example, the expression O(B^2 + A) cannot be reduced (without some special knowledge of A and B).
 
-#### Multi-part Algorithms: Add vs. Multiply
+### Multi-part Algorithms: Add vs. Multiply
 Suppose we have an algorithm that has two (or more) steps. When do you multiply the runtimes and when do you add them?
 
-##### Add the Runtimes: O(A + B)
+#### Add the Runtimes: O(A + B)
 ```
   1. for(int a : arrA)
   2.    print(a)
@@ -70,7 +65,7 @@ Suppose we have an algorithm that has two (or more) steps. When do you multiply 
 ```
 In this example, we do `A` chunks of work, then `B` chunks of work. Therefore, our total amount of work is **O(A + B)**
 
-##### Multiply the Runtimes: O(A * B)
+#### Multiply the Runtimes: O(A * B)
 ```
   1. for(int a : arrA)
   2.    for(int b : arrB)
@@ -82,7 +77,7 @@ In other words:
 - If the algorithm takes the form "do this, then, when you're finished, do that", then you add the runtimes.
 - If the algorithm takes the form "do this for each time you do that", then you multiply the runtimes.
 
-#### Amortized Runtimes
+### Amortized Runtimes
 An `ArrayList` (or `vector`) is a dynamically resizable array. This offers the benefits of an array while providing flexible size. You won't run out of space with an `ArrayList` since its capacity grows as elements get added.
 
 An `ArrayList` is implemented using an array. When the array hits capacity, the `ArrayList` class will create a new array with double the capacity and copy all the elements into the new array.
@@ -105,7 +100,7 @@ What then is the sum of X + X/2 + X/4 + X/8 + ... + 1? This is roughly `2X`.
 
 Therefore, `X` insertions take `O(X)` time, and the **amortized** time required is **O(1)**.
 
-#### Log(N) Runtimes
+### Log(N) Runtimes
 We commonly use `O(log N)` runtimes, but where does this arise from?
 
 Consider binary search as an example. In binary search, we look for an element `x` in an `N`-element, sorted array. We first compare `x` to the midpoint of the array. If `x == middle`, then we return. If `x < middle`, then we search on the left side of the array. If `x > middle`, then we search on the right side of the array.
@@ -142,7 +137,7 @@ So, what is `k` in the expression <img src="https://render.githubusercontent.com
 
 When you see a problem where the number of elements in the problem space gets halved each time, it will likely be a `O(log N)` runtime. This is also why finding an element in a balanced binary tree takes `O(log N)` time. With each comparison, we go either left or right. Hald the nodes are on each side, so we cut the problem space in half each time.
 
-<h4 style="text-decoration: underline;">Recursive Runtimes</h4>
+### Recursive Runtimes
 What is the runtime of this code?
 
 ```
@@ -220,7 +215,7 @@ The space complexity of this algorithm is **O(N)**. Although we have **O(<img sr
 
 <hr/>
 
-### Space Complexity
+## Space Complexity
 Time is not our only consideration when designing algorithms. We are also concerned with how much memory is required by an algorithm. Spatial asymptotic analysis is parallel with runtime analysis. I.e., if we need to create an array of size `n`, then this will require **O(N)** space. Similarly, a 2D array of size `n` by `n` will require **O(N^2)** space. 
 
 Stack space for recursive function calls is another consideration in spatial complexity analysis. For example, the following code would take both **O(N)** time and **O(N)** space.
@@ -256,4 +251,7 @@ Each function call adds one level to the call stack:
 ```
 There will be roughly <i>O(N)</i> calls to `pairSum()`. However, these calls do not exist simultaneously on the call stack. Therefore, we only need **O(1)** space.
 
-
+![Big-O](data-structures/img/big-o.png)
+![ds-ops](data-structures/img/data-structures-big-o.png)
+![sort-ops](data-structures/img/array-sorting-big-o.png)
+<hr/>
