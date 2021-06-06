@@ -104,12 +104,22 @@ In a post-order traversal, the root node is always the last node visited.
 ### Binary Heaps (Max-Heaps and Min-Heaps)
 A min-heap is a <i>complete</i> binary tree (that is, totally filled other than the rightmost elements on the last level) where each node is smaller than its children. The root, therefore, is the minimum element in the tree.
 
+Examples of Min-Heaps:
 >
 >            5                      13
 >         /      \               /       \  
 >       10        15           16         31 
 >      /                      /  \        /  \
 >     30                    41    51    100   41
+
+A Binary Heap is a Complete Binary Tree. A binary heap is typically represented as an array.
+
+  - The root element will be at Arr[0].
+  - For other nodes, located at Arr[i]:
+    - Arr[(i-1)/2]	Returns the parent node
+    - Arr[(2*i)+1]	Returns the left child node
+    - Arr[(2*i)+2]	Returns the right child node
+
 
 ### Tries (Prefix Trees)
 A trie (sometimes called a prefix tree) is a variant of an n-ary tree in which characters are stored at each node. Each path down the tree might represent a word, for example. The * nodes (sometimes called null nodes) are often used to indicate complete words. The existence of the MA path indicates that there are words that start with MA.
