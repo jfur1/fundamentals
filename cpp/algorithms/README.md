@@ -7,3 +7,6 @@
 ## [Sorting](sorting)
   * [MergeSort](sorting/mergesort.cpp)
   * [QuickSort](sorting/quicksort.cpp)
+  * [BubbleSort](sorting/bubblesort.cpp)
+  * [HeapSort](sorting/heapsort.cpp)
+  * [Topological Sort](sorting/topological-sort.cpp)
