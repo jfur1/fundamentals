@@ -27,6 +27,38 @@ void decToBin(int n){
     printf("\n");
     return;
 }
+
+/* Bit Insertion 
+    Given two, 32-bit numbers N & M, and 2 bit positions i & j, write a method to insert
+    M into N such that M starts at position j and ends at bit i. You can assume
+    that the bits j through i have enough space to fit all of M. That is, 
+    if M = 10011, you can assume that there are ay least 5 bits between j and i. 
+    You would not, for example, have j = 3, and i = 2, since M wouldn't fit.
+*/
+int bitInsertion(int N, int M, int i, int j){
+    int x = 0;
+    int new_N = N;
+    for(int k = 0; k < 32; k++){
+        if(k <= i && k >= j){
+            new_N = getBit(M, x) ? setBit(new_N, k) : clearBit(new_N, k);
+            x++;
+        } else{
+            new_N = getBit(N, k) ? setBit(new_N, k) : clearBit(new_N, k);
+        }
+    }
+    printf("Original N Value: ");
+    decToBin(N);
+
+    printf("Value of M: ");
+    decToBin(M);
+        
+    printf("New N Value: ");
+    decToBin(new_N);
+    return N;
+}
+
+
+
 int main(){
 
     return 0;
