@@ -37,6 +37,24 @@ Often times we need to estimate the cost or weight of an edge in a graph travers
 
 ### Dijkstra's Search Algorithm
 
+Given a graph and a source vertex, Dijkstra's Algorithm returns the shortest paths from the source vertex to all other vertices in the given graph.
+
+The Algorithm:
+```
+  1. Create a set SPTset (shortest path tree set) which keeps track of the vertices included in the shortest path tree. I.e., whose minimum distance from the source is calculated and finalized. Initialized to empty. 
+  
+  2. Assign a distance value to all vertices in the input graph and initialize all distance values as INFINITY. Assign distance value to 0 for the source vertex so that it is selected first. 
+  
+  3. While SPTset doesn't include all vertices:
+     
+     a) Pick a vertex `u` which is not in SPTset and has minimum distance value
+     
+     b) Include `u` to SPTset
+     
+     c) Update distance value of all adjacent vertices of `u`. To update the distance values, iterate through all adjacent vertices. For every adjacent vertex v, if the sum of the distance value of `u` (from the source) and weight of edge u->v is less than the distance value of `v`, then update the distance value of `v`.
+  
+```
+
 ### Astar Search
  
 A* Search algorithm is one of the best and popular technique used in path-finding and graph traversals.
