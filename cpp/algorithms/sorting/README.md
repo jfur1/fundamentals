@@ -41,6 +41,31 @@ Advantages:
 - In-place sorting algorithm -- no auxilary space required
 <hr/>
 
+### Bubble Sort
+
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+
+C++ Implementation:
+```
+void swap(int *xp, int *yp)
+{
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+}
+ 
+void bubbleSort(int arr[], int n)
+{
+    int i, j;
+    for (i = 0; i < n-1; i++)    
+     
+    // Last i elements are already in place
+    for (j = 0; j < n-i-1; j++)
+        if (arr[j] > arr[j+1])
+            swap(&arr[j], &arr[j+1]);
+}
+```
+
 ## Dynamic Programming (Memoization) Algorithms
 In dynamic programming, we using memoization to avoid repeated work by storing previously calculated results. The problem is divided into smaller, overlapping subproblems and the results are stored for future use.
 
