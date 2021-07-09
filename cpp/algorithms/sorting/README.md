@@ -66,6 +66,13 @@ void bubbleSort(int arr[], int n)
 }
 ```
 
+### Heap Sort
+Heap sort is a comparison-based sorting technique based on Binary Heap data structure. It is similar to selection sort where we first find the minimum element and place the minimum element at the beginning. We repeat the same process for the remaining elements.
+
+> Complexity:
+>   - Time: O(N Log N)
+>   - Space: O(1)
+
 ## Dynamic Programming (Memoization) Algorithms
 In dynamic programming, we using memoization to avoid repeated work by storing previously calculated results. The problem is divided into smaller, overlapping subproblems and the results are stored for future use.
 
