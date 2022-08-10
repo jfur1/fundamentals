@@ -2,24 +2,24 @@
 
 ## Table of Contents
 
-### [Algorithms](algorithms)
-  * [Sorting](algorithms/sorting)
+### [Algorithms](cpp/algorithms)
+  * [Sorting](cpp/algorithms/sorting)
   
-  * [Searching](algorithms/searching)
+  * [Searching](cpp/algorithms/searching)
 
 
-### [Data Structures](data-structures)
-  * [Arrays and Strings](data-structures/1-arrays-and-strings)
+### [Data Structures](cpp/data-structures)
+  * [Arrays and Strings](cpp/data-structures/1-arrays-and-strings)
 
   * [Linked Lists](2-linked-lists)
 
-  * [Stacks and Queues](data-structures/3-stacks-and-queues)
+  * [Stacks and Queues](cpp/data-structures/3-stacks-and-queues)
 
-  * [Graphs](data-structures/4-graphs)
+  * [Graphs](cpp/data-structures/4-graphs)
   
-  * [Bit Manipulation](data-structures/5-bit-manipulation)
+  * [Bit Manipulation](cpp/data-structures/5-bit-manipulation)
 
-  * [Classes](data-structures/6-classes)
+  * [Classes](cpp/data-structures/6-classes)
 
 <hr/>
 
