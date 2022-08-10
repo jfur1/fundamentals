@@ -11,7 +11,7 @@
 ### [Data Structures](cpp/data-structures)
   * [Arrays and Strings](cpp/data-structures/1-arrays-and-strings)
 
-  * [Linked Lists](2-linked-lists)
+  * [Linked Lists](cpp/data-structures/2-linked-lists)
 
   * [Stacks and Queues](cpp/data-structures/3-stacks-and-queues)
 
